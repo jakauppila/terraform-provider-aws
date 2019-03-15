@@ -128,6 +128,9 @@ The `egress` block supports:
 * `to_port` - (Required) The end range port (or ICMP code if protocol is "icmp").
 * `description` - (Optional) Description of this egress rule.
 
+~> ICMP details
+TODO: Add the icmp codes here.
+
 ~> **NOTE on Egress rules:** By default, AWS creates an `ALLOW ALL` egress rule when creating a
 new Security Group inside of a VPC. When creating a new Security
 Group inside a VPC, **Terraform will remove this default rule**, and require you
