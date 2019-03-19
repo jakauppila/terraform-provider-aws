@@ -145,7 +145,7 @@ egress {
 ```
 
 ## Usage with ICMP
-When adding particular ICMP message types via rules, you must specify the below below in `from_port` and `-1` for the `to_port`.
+When adding specific `icmp` protocol rules, refer to the table below for the `from_port` value. You will need to set `to_port` to `-1`.
 
 | from_port |  ICMP Message Type                 |
 |-----------|------------------------------------|
