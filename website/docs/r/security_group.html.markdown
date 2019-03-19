@@ -144,6 +144,46 @@ egress {
 }
 ```
 
+## Usage with ICMP
+When adding particular ICMP message types via rules, you must specify the below below in `from_port` and `-1` for the `to_port`.
+
+| from_port |  ICMP Message Type                 |
+|-----------|------------------------------------|
+| 0         |  Echo Reply                        |
+| 3         |  Destination Unreachable           |
+| 4         |  Source Quench                     |
+| 5         |  Redirect Message                  |
+| 6         |  Alternate Host Address            |
+| 8         |  Echo Request                      |
+| 9         |  Router Advertisement              |
+| 10        |  Router Solicitation               |
+| 11        |  Time Exceeded                     |
+| 12        |  Parameter Problem: Bad IP header  |
+| 13        |  Timestamp                         |
+| 14        |  Timestamp Reply                   |
+| 15        |  Information Request               |
+| 16        |  Information Reply                 |
+| 17        |  Address Mask Request              |
+| 18        |  Address Mask Reply                |
+| 30        |  Traceroute                        |
+| 31        |  Datagram Conversion Error         |
+| 32        |  Mobile Host Redirect              |
+| 33        |  Where Are You                     |
+| 34        |  Here I Am                         |
+| 35        |  Mobile Registration Request       |
+| 36        |  Mobile Registration Reply         |
+| 37        |  Domain Name Request               |
+| 38        |  Domain Name Reply                 |
+| 39        |  SKIP Algorithm Discovery Protocol |
+| 40        |  Photuris, Security Failures       |
+| -1        |  All                               |
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AuthorizeSecurityGroupIngress.html
+https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AuthorizeSecurityGroupEgress.html
+
+
+
 ## Usage with prefix list IDs
 
 Prefix list IDs are managed by AWS internally. Prefix list IDs
